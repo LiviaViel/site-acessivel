@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carlo Acutis</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="icon" href="img/icon-carlo.jpg">
+  <meta name="description" content="Projeto sobre Carlo Acutis, jovem beato que será canonizado pela Igreja Católica.">
+</head>
+
+<body>
+  
+  <header class="p-4 bg-light">
+  <nav class="container d-flex justify-content-center align-items-center gap-5">
+    <img src="img/icon-carlo.jpg" class="logo-topo me-4" alt="logo de Carlo Acutis" loading="lazy">
+    <ul class="nav">
+      <li class="nav-item"><a href="#inicio" class="nav-link">Início</a></li>
+      <li class="nav-item"><a href="#historia" class="nav-link">História</a></li>
+      <li class="nav-item"><a href="#galeria" class="nav-link">Galeria</a></li>
+      <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+      
+      <div id="caixa-acessibilidade">
+        <button id="btn-acessibilidade" class="btn btn-primary fw-bold" aria-expanded="false">Acessibilidade</button>
+        <div id="lista-acessibilidade" class="opcoes escondido">
+          <button id="mais-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar fonte">A+</button>
+          <button id="menos-fonte" class="btn btn-primary fw-bold" aria-label="Diminuir fonte">A-</button>
+          <button id="contraste" class="btn btn-primary fw-bold" aria-label="Ativar contraste">
+            <i class="bi bi-shadows"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  
+  <main class="container my-5">
+
+    
+    <section id="inicio" class="my-5">
+      <div class="fundo-inicio d-flex justify-content-between align-items-center">
+        <div class="lado-texto">
+          <h1 class="display-5 fw-bold text-dark">Conheça Carlo Acutis</h1>
+          <p class="lead">O jovem que usou a tecnologia para evangelizar e será proclamado santo.</p>
+          <a href="#historia" class="btn btn-primary btn-lg">Quero conhecer!</a>
+        </div>
+        <img src="img/foto-de-perfil-carlo.jpeg" class="img-fluid img-inicio" alt="foto de perfil de Carlo Acutis" loading="lazy">
+      </div>
+    </section>
+
+    
+    <section id="historia" class="my-5" tabindex="0" aria-label="História de Carlo Acutis">
+      <div class="container d-flex align-items-center">
+        <div class="col-4 d-flex justify-content-center">
+          <img src="img/carlo-sorrindo.jpeg" class="rounded-circle" width="270" height="330" alt="Carlo Acutis em sua juventude" loading="lazy">
+        </div>
+        <div class="col-7">
+          <h2>Quem foi Carlo Acutis?</h2>
+          <p>Carlo Acutis (1991–2006) foi um jovem católico italiano que dedicou sua vida a difundir a fé através da
+            internet. Ficou conhecido por catalogar milagres eucarísticos em um site, unindo espiritualidade e
+            tecnologia. Beatificado em 2020, será proclamado santo pela Igreja Católica no dia 07 de Setembro de 2025.</p>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="galeria" class="my-5" tabindex="0" aria-label="Galeria de fotos de Carlo Acutis">
+      <h2 class="text-center">Galeria</h2>
+      <div class="container p-3 mt-3 fundo-galeria">
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-3">
+            <img src="img/peregrinacao.jpeg" class="img-fluid rounded-4" alt="Carlo Acutis em peregrinação" loading="lazy">
+          </div>
+          <div class="col-md-4 mb-3">
+            <img src="img/rezando.jpeg" class="img-fluid rounded-4" alt="Carlo Acutis rezando em uma igreja" loading="lazy">
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-3">
+            <img src="img/carlo-sorrindo.jpeg" class="img-fluid rounded-4" alt="Carlo Acutis sorrindo" loading="lazy">
+          </div>
+          <div class="col-md-4 mb-3">
+            <img src="img/carlo-dormindo.jpeg" class="img-fluid rounded-4" alt="Imagem do túmulo de Carlo Acutis" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="contato" class="my-5">
+      <div class="container p-4 d-flex justify-content-center">
+        <div class="col-md-8 rounded-4 formulario-contato">
+          <h2 class="mb-3">Fale conosco</h2>
+          <form>
+            <div class="mb-3">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" class="form-control" placeholder="Digite seu nome" required>
+            </div>
+            <div class="mb-3">
+              <label for="email">Email</label>
+              <input type="email" id="email" class="form-control" placeholder="Digite seu email" required>
+            </div>
+            <div class="mb-3">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" rows="4" class="form-control" placeholder="Escreva sua mensagem" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="text-center p-3 bg-light">
+    <p>Acesse nossas redes:</p>
+    <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+    <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+    <p class="mt-3">Projeto sobre Carlo Acutis - Lívia Viel.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

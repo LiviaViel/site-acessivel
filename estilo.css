@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+:root {
+    --azul-principal: #2E5EAA;
+    --dourado-detalhe: #FFD700;
+    --contraste-fundo: #000000;
+    --contraste-texto: #ffffff;
+    --contraste-link: #FFD700;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #222;
+}
+
+header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #eee;
+}
+
+.logo-topo {
+  width: 100px;     
+  height: 100px;     
+  object-fit: cover; 
+  border-radius: 50%; 
+}
+
+
+
+section {
+    padding-bottom: 5rem;
+}
+
+.nav-link {
+    color: var(--azul-principal);
+    font-weight: 600;
+}
+
+.fundo-inicio {
+    
+    border-radius: 50px;
+    width: 100%;
+    min-height: 500px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-inicio {
+    max-width: 450px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.lado-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.lado-texto h1 {
+    text-shadow: -3px 3px var(--azul-principal);
+}
+
+.btn.btn-primary {
+    background-color: var(--azul-principal);
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    padding: 0.7rem 2rem;
+}
+
+#historia {
+    
+    padding-top: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#historia h2 {
+    font-family: 'Lemon', serif;
+    font-size: 2.2em;
+    color: var(--azul-principal);
+}
+
+#galeria {
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    padding-top: 2rem;
+}
+
+
+
+
+.formulario-contato {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    font-weight: 500;
+}
+
+.formulario-contato button {
+    background-color: var(--azul-principal);
+    border: none;
+    font-weight: bold;
+}
+
+.form-control {
+    background-color: #f1f5f9;
+}
+
+
+#caixa-acessibilidade {
+    position: fixed;
+    top: 2rem;
+    right: 20px;
+    z-index: 500;
+}
+
+
+
+#lista-acessibilidade {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#lista-acessibilidade button {
+    margin-bottom: 5px;
+}
+
+.escondido {
+    display: none;
+}
+
+
+.modo-contraste {
+    background-color: var(--contraste-fundo) !important;
+    color: var(--contraste-texto) !important;
+}
+
+.modo-contraste header,
+.modo-contraste footer,
+.modo-contraste .formulario-contato {
+    background-color: var(--contraste-fundo) !important;
+    color: var(--contraste-texto) !important;
+}
+
+.modo-contraste .nav-link {
+    color: var(--contraste-link) !important;
+}
+
+.modo-contraste .btn-primary {
+    background-color: var(--contraste-link) !important;
+    color: var(--contraste-fundo) !important;
+}
+
+.modo-contraste #historia,
+.modo-contraste #galeria {
+    background: none !important;
+}
