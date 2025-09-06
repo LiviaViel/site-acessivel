@@ -5,43 +5,42 @@ document.addEventListener('DOMContentLoaded', function () {
   const diminuirFonte = document.getElementById('menos-fonte');
   const botaoContraste = document.getElementById('contraste');
 
-  // Validação rápida: se algo não existir, avisa no console e sai
+  
   if (!(botaoAcess && listaAcess && aumentarFonte && diminuirFonte && botaoContraste)) {
     console.warn('Acessibilidade: verifique os IDs no HTML (btn-acessibilidade, lista-acessibilidade, mais-fonte, menos-fonte, contraste).');
     return;
   }
 
-  // Abrir/fechar lista de opções
+ 
   botaoAcess.addEventListener('click', function () {
     listaAcess.classList.toggle('escondido');
     const ativo = botaoAcess.getAttribute('aria-expanded') === 'true';
     botaoAcess.setAttribute('aria-expanded', String(!ativo));
   });
 
-  // ----- Controle de fonte (agora no :root/html, não no body) -----
-  // Usar % deixa tudo que usa rem escalar junto com Bootstrap
-  let escala = 100; // começa em 100% (padrão)
+  
+  let escala = 100; 
   const aplicarFonte = () => {
-    document.documentElement.style.fontSize = `${escala}%`; // altera o <html>
+    document.documentElement.style.fontSize = `${escala}%`;
   };
 
   aumentarFonte.addEventListener('click', function () {
-    escala = Math.min(escala + 10, 200); // limite máx 200%
+    escala = Math.min(escala + 10, 200);
     aplicarFonte();
   });
 
   diminuirFonte.addEventListener('click', function () {
-    escala = Math.max(escala - 10, 70); // limite mín 70%
+    escala = Math.max(escala - 10, 70); 
     aplicarFonte();
   });
 
-  // ----- Contraste -----
+  
   botaoContraste.addEventListener('click', function () {
     document.body.classList.toggle('modo-contraste');
   });
 });
 
-// Animações com ScrollReveal (mantive igual)
+
 try {
   ScrollReveal().reveal('#inicio', { delay: 400 });
   ScrollReveal().reveal('#historia', { delay: 400 });
@@ -51,3 +50,4 @@ try {
   
   console.warn('ScrollReveal não disponível:', e);
 }
+
